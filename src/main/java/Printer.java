@@ -16,14 +16,11 @@ public class Printer {
         return toner;
     }
 
-    public String print(int pages, int copies){
+    public void print(int pages, int copies){
         int sheets = pages * copies;
         if (sheets <= this.paper && sheets <= this.toner){
             this.paper -= sheets;
             this.toner -= sheets;
-            return "Printing complete";
-        } else {
-            return "There is not enough paper or toner to print this.";
         }
     }
 }

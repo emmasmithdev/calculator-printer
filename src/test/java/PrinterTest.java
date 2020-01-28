@@ -35,6 +35,8 @@ public class PrinterTest {
     }
 
     @Test public void tooManyPages(){
-        assertEquals("There is not enough paper or toner to print this.", printer.print(100, 10));
+        printer.print(100, 10);
+        assertEquals(500, printer.getPaper());
+        assertEquals(500, printer.getToner());
     }
 }
